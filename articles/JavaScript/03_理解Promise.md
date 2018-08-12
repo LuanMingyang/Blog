@@ -12,7 +12,7 @@
 
 通过 Promise对象，可以将异步操作以同步操作的流程表达出来，避免了层层嵌套的回调函数。
 
-![](https://github.com/LuanMingyang/Blog/images/promise.png)
+<img width="200" src="https://github.com/LuanMingyang/Blog/images/promise.png" alt="Promise"/>
 
 实际上 Promise/A+ 规范中仅指定了 Promise 对象的`then`方法的行为，其它一切我们常见的方法/函数都并没有指定，包括`catch`，`race`，`all`等常用方法。 
 
