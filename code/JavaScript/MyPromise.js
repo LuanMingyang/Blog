@@ -156,6 +156,7 @@ MyPromise.prototype.catch = function(onRejected) {
   return this.then(null, onRejected)
 }
 
+// for test
 MyPromise.deferred = function() {
   let obj = {};
   obj.promise = new MyPromise(function(resolve, reject) {
