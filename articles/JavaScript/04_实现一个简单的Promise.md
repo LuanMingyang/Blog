@@ -1,4 +1,4 @@
-# 简单实现 Promise
+# 实现一个简单的 Promise
 
 根据 [Promise/A+ 规范](https://promisesaplus.com/)，实现一个简单的 Promise 对象
 

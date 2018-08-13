@@ -1,4 +1,4 @@
-# call，apply， bind
+# 关于call、apply以及bind
 
 ### 前两者的区别
 
