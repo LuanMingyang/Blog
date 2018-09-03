@@ -143,3 +143,50 @@ Promise.reject('error');
 // 等价于
 new Promise((resolve, reject) => reject('error'));
 ```
+## 11. 实现 Promise 串行
+
+```javascript
+function executeWaterfall(...executors) {
+  const output = [];
+  let p = Promise.resolve(void 0);
+  for (const executor of executors) {
+    p = p.then(executor).then((data) => output.push(data));
+  }
+  return p.then(() => output);
+}
+
+// test
+executeWaterfall(
+  () => {
+ 	console.log('1 executed');
+    return 0;
+  },
+  () => {
+    console.log('2 executed');
+    return new Promise((resolve) => {
+      setTimeout(() => {
+      	console.log('2 resolved');
+        resolve(1);
+      }, 1e3);
+    });
+  },
+  () => {
+    console.log('3 executed');
+    return Promise.resolve(2);
+  },
+  () => {
+    console.log('4 executed');
+    return 'hello world';
+  }
+).then((data) => {
+  console.log('result: %s', data.join(', '));
+});
+
+// 1 executed
+// 2 executed
+// 2 resolved
+// 3 executed
+// 4 executed
+// result: 0, 1, 2, hello world
+```
+
