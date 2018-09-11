@@ -6,7 +6,8 @@
  *   this.next = null;
  * }
  * 
- * 
+ * 利用递归解决。
+ * 注意处理头结点为空的情况。
  */
 function merge(pHead1, pHead2) {
   if (!pHead1) {
