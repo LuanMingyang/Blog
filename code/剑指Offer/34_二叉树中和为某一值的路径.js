@@ -32,9 +32,6 @@
  * 9）结束遍历，一共找到两条满足条件的路径。
  */
 function findPath(root, expectNumber) {
-  if (!root) {
-    return;
-  }
   let allPath = [];
   let path = [];
   let currentSum = 0;
