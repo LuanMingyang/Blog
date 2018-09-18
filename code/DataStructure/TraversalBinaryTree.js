@@ -53,8 +53,8 @@ function posOrderRecur(node) {
     return;
   }
   posOrderRecur(node.left);
-  console.log(node.value);
   posOrderRecur(node.right);
+  console.log(node.value);
 }
 
 
