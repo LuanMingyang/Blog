@@ -33,8 +33,8 @@ function preOrderRecur(node) {
     return;
   }
   console.log(node.value);
-  preOrder(node.left);
-  preOrder(node.right);
+  preOrderRecur(node.left);
+  preOrderRecur(node.right);
 }
 
 // 递归中序遍历
@@ -42,9 +42,9 @@ function inOrderRecur(node) {
   if (!node) {
     return;
   }
-  preOrder(node.left);
+  inOrderRecur(node.left);
   console.log(node.value);
-  preOrder(node.right);
+  inOrderRecur(node.right);
 }
 
 // 递归后序遍历
@@ -52,9 +52,9 @@ function posOrderRecur(node) {
   if (!node) {
     return;
   }
-  preOrder(node.left);
+  posOrderRecur(node.left);
   console.log(node.value);
-  preOrder(node.right);
+  posOrderRecur(node.right);
 }
 
 
