@@ -27,6 +27,25 @@ var tree = {
   }
 };
 
+// 层次遍历
+function levelOrderTraversal(node) {
+  if (!node) {
+    return;
+  }
+  let queue = [];
+  queue.push(node);
+  while (queue.length) {
+    node = queue.shift();
+    console.log(node.val);
+    if (node.left) {
+      queue.push(node.left);
+    }
+    if (node.right) {
+      queue.push(node.right);
+    }
+  }
+}
+
 // 递归先序遍历
 function preOrderRecur(node) {
   if (!node) {
