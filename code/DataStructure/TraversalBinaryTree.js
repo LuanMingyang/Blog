@@ -27,7 +27,7 @@ var tree = {
   }
 };
 
-// 层次遍历
+// 广度优先遍历
 function levelOrderTraversal(node) {
   if (!node) {
     return;
@@ -46,6 +46,7 @@ function levelOrderTraversal(node) {
   }
 }
 
+// 深度优先遍历
 // 递归先序遍历
 function preOrderRecur(node) {
   if (!node) {
