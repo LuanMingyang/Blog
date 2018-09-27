@@ -7,6 +7,12 @@
  *    / \     / \
  *   2   4   6   8
  * 
+ * function TreeNode(x){
+ *   this.val = x;
+ *   this.left = null;
+ *   this.right = null;
+ * }
+ * 
  * 二叉搜索树的中序遍历是递增排序的，可以找出第k小节点。
  */
 function kthNode(pRoot, k) {
