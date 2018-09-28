@@ -5,5 +5,6 @@
  */
 
 function leftRotateString(str, n) {
+  if (!str) return '';
   return str.slice(n) + str.slice(0, n);
 }
