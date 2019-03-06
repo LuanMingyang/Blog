@@ -30,3 +30,18 @@ function findNumberAppearOnce(numbers) {
 
   return res;
 }
+
+// https://leetcode-cn.com/problems/single-number-ii/comments/21329
+function findNumberAppearOnce2(numbers) {
+  if (!numbers || numbers.length < 2) {
+    return;
+  }
+
+  let x = 0, y = 0;
+  numbers.forEach(n => {
+    x = (x ^ n) & ~y;
+    y = (y ^ n) & ~x;
+  });
+
+  return x;
+}
