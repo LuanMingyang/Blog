@@ -16,7 +16,7 @@ function findNumberAppearOnce(numbers) {
     let num = numbers[i];
     let j = 0;
     while (num) {
-      bitSum[j] = bitSum[j] > 0 ? bitSum[j] + (num & 1) : 1;
+      bitSum[j] = bitSum[j] > 0 ? bitSum[j] + (num & 1) : num & 1;
       j++;
       num >>= 1;
     }
